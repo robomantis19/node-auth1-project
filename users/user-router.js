@@ -1,10 +1,10 @@
 const bcrypt = require('bcrypt');
 const router = require('express').Router(); 
-
+const gateWay = require('../reg/gate-way.js');
 const User = require('../users/user-model.js');
 
 
-router.get('/users', (req, res) => { 
+router.get('/users', gateWay, (req, res) => { 
     User.find()
     .then(user => { 
         res.status(200).json(user); 

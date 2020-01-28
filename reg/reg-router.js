@@ -18,8 +18,9 @@ router.post('/register', (req, res) => {
     })
     .catch(err => { 
         console.log('error reg: ', err)
-        res.status(500).json({error: "registration did not work. "})
+        res.status(500).json({error: "registration did not work. ", error: err})
     })
 })
+
 
 module.exports = router

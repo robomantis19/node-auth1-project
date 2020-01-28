@@ -11,7 +11,7 @@ module.exports = {
 }
 
 function find() {
-    return db('user').select('id', 'username');
+    return db('user').select('id', 'username','password');
 }
 
 function add(user){
@@ -31,5 +31,6 @@ function findById(id){
 }
 function findBy(filter){
     return db('user')
+    .select('id', 'username', 'password')
     .where(filter);
 }
