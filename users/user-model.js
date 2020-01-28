@@ -11,7 +11,7 @@ module.exports = {
 }
 
 function find() {
-    return db('user').select('id', 'uname', 'pass');
+    return db('user').select('id', 'username');
 }
 
 function add(user){

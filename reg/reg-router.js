@@ -6,8 +6,8 @@ const bcrypt = require('bcryptjs');
 router.post('/register', (req, res) => { 
     // let { uname, pass } = req.body;
     let user = req.body;
-    const hash = bcrypt.hashSync(user.pass, 8); 
-    user.pass = hash;
+    const hash = bcrypt.hashSync(user.password, 8); 
+    user.password = hash;
     //console.log(user.pass);
     // console.log('uname pass', uname, pass)
 
